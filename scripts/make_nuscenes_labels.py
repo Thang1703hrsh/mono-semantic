@@ -120,8 +120,6 @@ def load_map_data(dataroot, location):
 
 
 
-
-
 if __name__ == '__main__':
 
     # Load the default configuration
@@ -132,11 +130,9 @@ if __name__ == '__main__':
     dataroot = os.path.expandvars(config.dataroot)
     print(dataroot)
     nuscenes = NuScenes(config.nuscenes_version, dataroot)
-    print(nuscenes)
     # Preload NuScenes map data
     map_data = { location : load_map_data(dataroot, location) 
                  for location in nusc_utils.LOCATIONS }
-    
     # Create a directory for the generated labels
     output_root = os.path.expandvars(config.label_root)
     os.makedirs(output_root, exist_ok=True)

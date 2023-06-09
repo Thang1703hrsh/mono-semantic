@@ -41,4 +41,4 @@ ved:
   bottleneck_dim: 18
 
 vpn:
-  output_size : [200, 200]
+  output_size : [500, 500]
